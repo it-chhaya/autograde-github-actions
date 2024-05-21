@@ -24,9 +24,9 @@ jobs:
         with:
           maven-version: 3.9.6
       - name: Run Autograding with test data
-        uses: uhafner/autograding-github-action@main
+        uses: it-chhaya/autograde-github-actions@main
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.TOKEN }}
           checks-name: "Autograding with Test Data"
           config: >
             {
@@ -137,9 +137,9 @@ jobs:
       - name: Build
         run: mvn -ntp clean verify -Pci -Ppit -Pdepgraph
       - name: Run Autograding
-        uses: uhafner/autograding-github-action@main
+        uses: it-chhaya/autograde-github-actions@main
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.TOKEN }}
           checks-name: "Autograding GitHub Action"
       - name: Write metrics to GitHub output
         id: metrics
@@ -194,5 +194,5 @@ jobs:
         uses: ad-m/github-push-action@master
         if: ${{ success() }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
           branch: main
