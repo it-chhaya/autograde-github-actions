@@ -5,6 +5,7 @@ template: |
   $CHANGES
 
 # Emoji reference: https://gitmoji.carloscuesta.me/
+# Emoji reference: https://gitmoji.carloscuesta.me/
 categories:
   - title: 💥 Removed
     label: removed
